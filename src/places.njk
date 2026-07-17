@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: Places // THAT'S A WEBSITE
+permalink: /places/
+---
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+  <h2 style="border: none; margin: 0; padding: 0;">PLACES_COLLECTION</h2>
+  <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: bold; background: var(--riso-pink); color: white; padding: 0.2rem 0.6rem; border: var(--border-thin);">
+    TOTAL: {{ collections.places | length }}
+  </span>
+</div>
+
+<div class="posts-grid">
+  {% for post in collections.places | reverse %}
+    <article class="post-card">
+      <div>
+        <div class="post-meta">
+          <time class="post-date" datetime="{{ post.date | postDate }}">{{ post.date | postDate }}</time>
+        </div>
+        
+        <h3 class="post-card-title">
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </h3>
+        
+        <p class="post-description">
+          {{ post.data.description or "No description provided." }}
+        </p>
+      </div>
+      
+      <div style="margin-top: auto;">
+        <div class="post-tags" style="margin-bottom: 1.2rem;">
+          {% for tag in post.data.tags %}
+            {% if tag != "posts" %}
+              <span class="badge {% if loop.index0 % 4 == 0 %}badge-pink{% elif loop.index0 % 4 == 1 %}badge-blue{% elif loop.index0 % 4 == 2 %}badge-yellow{% else %}badge-teal{% endif %}">
+                #{{ tag }}
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        
+        <a href="{{ post.url }}" class="btn wobble-hover" style="width: 100%; text-align: center; justify-content: center;">Read Article →</a>
+      </div>
+    </article>
+  {% else %}
+    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; border: var(--border-thick); border-style: dashed;">
+      <p style="font-family: var(--font-mono); font-weight: bold;">NO TRANS-MISSIONS TAGGED WITH #PLACES YET.</p>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="halftone-accent"></div>

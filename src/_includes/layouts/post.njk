@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <!-- Back navigation -->
+  <a href="/" class="back-link wobble-hover">Back to blog</a>
+
+  <!-- Post Header -->
+  <div class="post-header">
+    <div class="post-tags">
+      {% for tag in tags %}
+        {% if tag != "posts" %}
+          <span class="badge {% if loop.index0 % 4 == 0 %}badge-pink{% elif loop.index0 % 4 == 1 %}badge-blue{% elif loop.index0 % 4 == 2 %}badge-yellow{% else %}badge-teal{% endif %}">
+            #{{ tag }}
+          </span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    <h2>{{ title }}</h2>
+    
+    <div class="post-header-meta">
+      <span class="post-date">Printed: {{ date | postDate }}</span>
+      {% if author %}
+        <span class="post-author">By: {{ author }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Post Content (rendered from Markdown) -->
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="halftone-accent"></div>
+  <div style="margin-top: 2rem;">
+    <a href="/" class="btn wobble-hover">← Return to Homepage</a>
+  </div>
+</article>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "THAT'S A WEBSITE" }}</title>
+  <meta name="description" content="{{ description or "A 90s Risograph-themed blog built with Eleventy." }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Retro Window Panel -->
+    <header>
+      <div class="header-topbar">
+        <div class="window-dots">
+          <span class="window-dot"></span>
+          <span class="window-dot"></span>
+          <span class="window-dot"></span>
+        </div>
+        <span>WHIMSY_WEB_V2.0.EXE</span>
+        <span>[X]</span>
+      </div>
+      <div class="header-body">
+        <h1><a href="/" style="color: var(--ink-black); background: none; text-shadow: var(--drift-both);">THAT'S A WEBSITE</a></h1>
+        <span class="header-tagline">The Whimsical Adventures of Martin Splitt</span>
+      </div>
+      <nav>
+        <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+        <a href="/books/" class="nav-link {% if page.url == '/books/' %}active{% endif %}">Books</a>
+        <a href="/films/" class="nav-link {% if page.url == '/films/' %}active{% endif %}">Films</a>
+        <a href="/places/" class="nav-link {% if page.url == '/places/' %}active{% endif %}">Places</a>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-credits">
+        &copy; 2026. Built with <a href="https://11ty.dev/" target="_blank" rel="noopener">11ty</a>. Printed in Cyberspace.
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

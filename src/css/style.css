@@ -1,0 +1,470 @@
+/* 90s Risograph (Riso) Design System & Stylesheet */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Rubik+Mono+One&family=Syne:wght@700;800&display=swap');
+
+:root {
+  /* Color Palette (Traditional Risograph Inks) */
+  --paper-bg: #FAF6EE;       /* Warm Munken cream paper */
+  --ink-black: #1E1C1A;      /* Rich charcoal black soy ink, not digital black */
+  --riso-pink: #FF358B;      /* Fluorescent Pink */
+  --riso-blue: #1B3BF5;      /* Federal Blue */
+  --riso-teal: #00B894;      /* Green/Teal ink */
+  --riso-yellow: #FED330;    /* Sunflower Yellow */
+
+  /* Shadows mimicking ink misregistration */
+  --drift-pink: -3px -3px 0 var(--riso-pink);
+  --drift-blue: 3px 3px 0 var(--riso-blue);
+  --drift-both: -3px -3px 0 var(--riso-pink), 3px 3px 0 var(--riso-blue);
+  
+  /* Borders */
+  --border-thick: 3px solid var(--ink-black);
+  --border-thin: 2px solid var(--ink-black);
+  
+  /* Fonts */
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+  --font-heavy: 'Rubik Mono One', sans-serif;
+}
+
+/* Reset and Core Layout */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--paper-bg);
+  color: var(--ink-black);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- Risograph Ink Texture Overlay --- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.055;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Halftone Pattern Accent Blocks */
+.halftone-accent {
+  background-image: radial-gradient(var(--ink-black) 15%, transparent 16%);
+  background-size: 8px 8px;
+  opacity: 0.12;
+  height: 20px;
+  width: 100%;
+  border-top: var(--border-thin);
+  border-bottom: var(--border-thin);
+  margin: 1.5rem 0;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--riso-pink);
+  color: white;
+}
+
+/* Headers and Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: var(--font-heavy);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-shadow: var(--drift-both);
+  color: var(--ink-black);
+  margin-bottom: 1.5rem;
+  line-height: 1.0;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  color: var(--riso-blue);
+  border-bottom: var(--border-thick);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--riso-pink);
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--riso-blue);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.1s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--riso-pink);
+  background-color: var(--riso-yellow);
+}
+
+/* --- Layout Components --- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 90s Style Folder / Panel Header */
+header {
+  border: var(--border-thick);
+  background: var(--paper-bg);
+  box-shadow: 8px 8px 0 var(--ink-black);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header-topbar {
+  background-color: var(--ink-black);
+  color: var(--paper-bg);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.window-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--paper-bg);
+}
+.window-dot:nth-child(1) { background-color: var(--riso-pink); }
+.window-dot:nth-child(2) { background-color: var(--riso-yellow); }
+.window-dot:nth-child(3) { background-color: var(--riso-teal); }
+
+.header-body {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-bottom: var(--border-thick);
+}
+
+.header-tagline {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  background-color: var(--riso-yellow);
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border: var(--border-thin);
+  transform: rotate(-1deg);
+  margin-top: 0.5rem;
+}
+
+nav {
+  display: flex;
+  border-top: none;
+  background: var(--paper-bg);
+  font-family: var(--font-mono);
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 700;
+  border-right: var(--border-thick);
+  text-transform: uppercase;
+  color: var(--ink-black);
+}
+
+.nav-link:last-child {
+  border-right: none;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: var(--riso-pink);
+  color: white;
+  transform: none;
+}
+
+/* --- Card Grids & Posts Feed --- */
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media(min-width: 768px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.post-card {
+  border: var(--border-thick);
+  background-color: var(--paper-bg);
+  box-shadow: 6px 6px 0 var(--ink-black);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 24px 24px 0;
+  border-color: transparent var(--ink-black) transparent transparent;
+  transition: border-color 0.15s ease;
+}
+
+.post-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 var(--riso-pink);
+}
+
+.post-card:hover::before {
+  border-color: transparent var(--riso-teal) transparent transparent;
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-black);
+  margin-bottom: 0.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.post-date {
+  font-weight: 700;
+  color: var(--riso-blue);
+}
+
+.post-card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.post-card-title a {
+  color: var(--ink-black);
+}
+
+.post-card-title a:hover {
+  color: var(--riso-pink);
+  background: none;
+}
+
+.post-description {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border: var(--border-thin);
+  background-color: var(--paper-bg);
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0 var(--ink-black);
+}
+
+.badge-pink { background-color: #FFAEC9; color: var(--ink-black); }
+.badge-blue { background-color: #B5E2FF; color: var(--ink-black); }
+.badge-yellow { background-color: #FFF2A3; color: var(--ink-black); }
+.badge-teal { background-color: #B5F1D7; color: var(--ink-black); }
+
+/* --- Single Post Detail Layout --- */
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px dashed var(--ink-black);
+}
+
+.post-header-meta {
+  font-family: var(--font-mono);
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-weight: 700;
+}
+
+.post-content {
+  margin-bottom: 3rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content ul, .post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content blockquote {
+  border-left: 6px solid var(--riso-pink);
+  background-color: var(--paper-bg);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  border-top: var(--border-thin);
+  border-right: var(--border-thin);
+  border-bottom: var(--border-thin);
+  box-shadow: 4px 4px 0 var(--ink-black);
+}
+
+.post-content pre {
+  background-color: var(--ink-black);
+  color: var(--paper-bg);
+  padding: 1.2rem;
+  overflow-x: auto;
+  border: var(--border-thick);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  box-shadow: 4px 4px 0 var(--riso-blue);
+  margin: 1.5rem 0;
+}
+
+.post-content code:not(pre code) {
+  background-color: #ECE5D8;
+  padding: 0.1rem 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border: var(--border-thick);
+  box-shadow: 6px 6px 0 var(--riso-pink);
+  margin: 2rem 0;
+  display: block;
+}
+
+/* --- Buttons and Navigation Links --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  border: var(--border-thick);
+  background-color: var(--riso-yellow);
+  color: var(--ink-black);
+  box-shadow: 4px 4px 0 var(--ink-black);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--riso-pink);
+  background-color: var(--paper-bg);
+}
+
+.btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--ink-black);
+}
+
+/* Retro back link */
+.back-link {
+  font-family: var(--font-mono);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  gap: 0.5rem;
+}
+
+.back-link::before {
+  content: "←";
+  font-size: 1.2rem;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  border-top: var(--border-thick);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  position: relative;
+}
+
+.footer-credits {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border: var(--border-thin);
+  background-color: var(--paper-bg);
+  box-shadow: 3px 3px 0 var(--riso-teal);
+  transform: rotate(0.5deg);
+}
+
+/* Simple animations */
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wobble-hover:hover {
+  animation: wobble 0.3s ease infinite;
+}
