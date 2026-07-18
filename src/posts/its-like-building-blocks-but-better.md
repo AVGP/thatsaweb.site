@@ -15,6 +15,9 @@ I'm super excited about the games, but I'm also super excited about something el
 Remember when I read the manual of the Commodore and found out I can make my own programs? I'm sure this also works here, I just have to find out how.
 I think there's BASIC for Windows 98, but I haven't found it in the menu yet. The manual also doesn't say anything about it, weird.
 
+I really love programming - it's like building things with building blocks - but you never run out of building blocks and you can make your own building blocks, just like you need them to be!
+The Commodore couldn't do much, but I could make some small games and some programs to take away all the manual work for the maths homework. I also studied vocabulary with my own program, so that was nice.
+
 I'm super excited though - graphics are probably much cooler here and maybe I can write programs that can do more and are larger than what I've done so far.
 I'll check the library to see if they have books on how to program this computer. Maybe I can even write graphical programs with windows and stuff - SO EXCITING!
 
