@@ -1,7 +1,12 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 export default function(eleventyConfig) {
   // Passthrough copy for stylesheets and assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  // setup image processing
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   // Date formatting filter for posts
   eleventyConfig.addFilter("postDate", (dateObj) => {
