@@ -20,6 +20,12 @@ export default function(eleventyConfig) {
     });
   });
 
+  // just in case you use Windows. I pity the pain.
+	eleventyConfig.setChokidarConfig({
+		usePolling: true,
+		interval: 500,
+	});
+
   // Return configuration options
   return {
     dir: {
