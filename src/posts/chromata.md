@@ -9,7 +9,7 @@ author: Eva
 
 A closed shutter in Athens with the word ΧΡΩΜΑΤΑ painted on it, and a painter holding a can of house paint. Since 1963. Black and white.
 
-![Chromata](https://github.com/AVGP/thatsaweb.site/blob/5dd8a61a938650228d0f32ac2d70b94a1f29887f/src/images/chromata.jpeg)
+![Chromata](/images/chromata.jpg)
 
 Athens, May 2026. Photo by Martin.
 
