@@ -3,7 +3,8 @@ title: The Long Way to a Small, Angry Planet
 date: 2026-09-29
 description: A cozy Sci-Fi story from Becky Chambers
 tags:
-  - books
+  - sci-fi
+  - space
 author: Martin
 ---
 
