@@ -41,7 +41,7 @@ I'll start with two anecdotes.
 I once met a student who was really excited about what we were doing at the time with using machine learning to furnish apartments based on floorplans and some other inputs.
 After I explained what it is and how it worked, he looked me in the eye and said, disappointedly: "But that's just statistics". Yes, my friend, it is.
 
-A coworker of mine - the incredibly smart and incredibly friendly Julien - once explained AI as "a program that produces increasingly good output the more data you feed it". 
+A coworker of mine - the incredibly smart and incredibly friendly Julien - once explained machine learning as "a program that produces increasingly good output the more data you feed it". 
 
 This is what I need y'all to understand.
 The AI we're seeing is _data and maths_. At a very basic level, we feed it data and judge its output on whatever criteria we have, then it takes that feedback and repeats the process, until the feedback gets _good enough_.
@@ -64,8 +64,7 @@ People have different writing styles, ink and paper may vary in color and bright
 
 We give it a lot of examples and tell it how wrong it is, until it's right often enough. 
 
-It will still sometimes get things wrong and the output isn't easily predictable for every possible output,
-but it helps _a lot_ with a problem that isn't otherwise easy to solve with computers.
+It will still sometimes get things wrong and the output isn't easily predictable for every possible input, but it helps _a lot_ with a problem that isn't otherwise easy to solve with computers.
 
 So these are our tools: Data and statistics, tuning things to be _good enough_ but not having full control over the output. 
 
@@ -88,9 +87,13 @@ Well, we gave it human requests like "Summarize this email" or "Create an execut
 ![Gemini-generated image of a giant cat destroying a city as it hunts a laser beam coming from a UFO](/images/gemini-cat-laser-ufo.jpg)
 Yes, of course I had to. Convincing, innit? 
 
-We then looked at whatever the outcome was and said either: "wtf, no" (and maybe even elaborated on what was wrong, why and what we expected instead) or were excited about the result. We and our expectations became input as well. Convincing us that we got a helpful, creative, great response is the output its optimising for. 
+We then looked at whatever the outcome was and said either: "wtf, no" (and maybe even elaborated on what was wrong, why and what we expected instead) or were excited about the result. We and our expectations became input as well.
 
-We built a machine with the purpose of convincing us. **convincing machine**. 
+Convincing us that we got a helpful, creative, great response is the output its optimising for. 
+
+We built a machine with the purpose of convincing us. A **convincing machine**. 
+
+That's its purpose - and because it's machine learning it gets better at it the more data (prompts, training data and our responses to its output) it gets. 
 
 This machine doesn't know the concept of reality, of truth or lie. It took inputs, produced outputs and then repeated this process with additional input: Our feedback. 
 
