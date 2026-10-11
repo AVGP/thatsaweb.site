@@ -61,7 +61,10 @@ This is great. We know exactly what this is going to output for every input. We 
 Turns out, though: A lot of stuff is really hard to break into instructions like this. For example "Which hand-written number is in this photo?" is _very_ difficult. 
 
 People have different writing styles, ink and paper may vary in color and brightness, contrast etc. That's where machine learning (and in turn, AI) shines. 
-We give it a lot of examples and tell it how wrong it is, until it's right often enough. It will still sometimes get things wrong and the output isn't easily predictable for every possible output,
+
+We give it a lot of examples and tell it how wrong it is, until it's right often enough. 
+
+It will still sometimes get things wrong and the output isn't easily predictable for every possible output,
 but it helps _a lot_ with a problem that isn't otherwise easy to solve with computers.
 
 So these are our tools: Data and statistics, tuning things to be _good enough_ but not having full control over the output. 
@@ -83,11 +86,11 @@ Well, we gave it human requests like "Summarize this email" or "Create an execut
 "create a photorealistic picture of a huge cat destroying a city as it hunts a laser beam coming from an alien UFO in the sky".
 
 ![Gemini-generated image of a giant cat destroying a city as it hunts a laser beam coming from a UFO](/images/gemini-cat-laser-ufo.jpg)
-Yes, of course I had to.
+Yes, of course I had to. Convincing, innit? 
 
-We then looked at whatever the outcome was and said either: "wtf, no" (and maybe even elaborated on what was wrong, why and what we expected instead) or were excited about the result. We and our expectations became input, data, as well.
+We then looked at whatever the outcome was and said either: "wtf, no" (and maybe even elaborated on what was wrong, why and what we expected instead) or were excited about the result. We and our expectations became input as well. Convincing us that we got a helpful, creative, great response is the output its optimising for. 
 
-We built a **convincing machine**. 
+We built a machine with the purpose of convincing us. **convincing machine**. 
 
 This machine doesn't know the concept of reality, of truth or lie. It took inputs, produced outputs and then repeated this process with additional input: Our feedback. 
 
@@ -116,6 +119,6 @@ I love how agents can deal with other chatbots for me (lol) and even deal with s
 But do not mistake the convincing machine for a human being.
 
 Humans have morals, values, ideas, their own goals and emotions. They also sometimes have a bad day or values that don't align with yours. But we can hold each other accountable.
-The convincing machine will tell you - and everyone else - whatever it is, that is most convincing. That's not lying - because to lie, you have to consciouly choose to deceive.
+The convincing machine will tell you - and everyone else - whatever it is, that is most convincing. That's not lying - because to lie, you have to consciously choose to deceive.
 
 The machine doesn't do that, it just does what we built it to do.
