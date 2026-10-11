@@ -26,6 +26,7 @@ When we dive, we do so in the morning and finish up in the early afternoon. A gr
 Besides the famous view of the parliament building, we sat across the musical fountain on an island in the middle of the river, walked around the market with its dense collection of stalls and corridors, hung around the train station and walked through the old town.
 
 We found lots of small shops, lovely people and great cafes and restaurants! While people often looked disinterested, annoyed or grumpy, most turned out to be friendly and helpful.
+What's even better is that my wife found her favorite tattoo-artist here and so we both enjoy going to Budapest for a couple of days together. I go dive, she gets inked, we enjoy the afternoons and evenings together.
 
 ![The Parliament Palace in Budapest at night](/images/places/budapest-parlament-night.jpg)
 
