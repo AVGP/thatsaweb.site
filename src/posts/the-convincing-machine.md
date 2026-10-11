@@ -22,6 +22,7 @@ when in reality the first significant work ([the perceptron](https://en.wikipedi
 
 But there must have been a revolutionary development for it to explode so massively in the last few years right? Well, yes and no. 
 A lot of amazing new hardware has been coming to the market, the realisation that we can use GPUs with their massively parallel computing architecture is fantastic to deal with the math that makes AI tick has sped things up, too.
+
 Of course, also from a maths and computer science perspective, a lot of things have happened and been discovered, but *the foundations have been here for a really long time*.
 
 For example: Researchers have recently found ways to tweak reinforcement learning a bit. But you know what? Reinforcement learning is a concept from Psychology in the 1910s, from maths in the 1950s and computer science in the late 70s
@@ -40,10 +41,13 @@ I'll start with two anecdotes.
 I once met a student who was really excited about what we were doing at the time with using machine learning to furnish apartments based on floorplans and some other inputs.
 After I explained what it is and how it worked, he looked me in the eye and said, disappointedly: "But that's just statistics". Yes, my friend, it is.
 
-A coworker of mine - the incredibly smart and incredibly friendly Julien - once explained AI as "a program that produces increasingly good output the more data you feed it". This is what I need y'all to understand.
+A coworker of mine - the incredibly smart and incredibly friendly Julien - once explained AI as "a program that produces increasingly good output the more data you feed it". 
+
+This is what I need y'all to understand.
 The AI we're seeing is _data and maths_. At a very basic level, we feed it data and judge its output on whatever criteria we have, then it takes that feedback and repeats the process, until the feedback gets _good enough_.
 
 Don't get me wrong - this is amazing!
+
 For decades, the way we made things with computers was programming. Programming required us to break down something we want into myriads of small, computable instructions and basically build out computer-executable rules bit by bit.
 Many things were easy that way - "Let me enter two numbers, then show the sum of these numbers" is easy enough to program. Another example could be:
   
