@@ -468,3 +468,13 @@ footer {
 .wobble-hover:hover {
   animation: wobble 0.3s ease infinite;
 }
+
+.not-so-big-50 {
+  width: 50%;
+  margin-left: 25% !important;
+}
+
+.not-so-big-30 {
+  width: 30%;
+  margin-left: 35% !important;
+}
