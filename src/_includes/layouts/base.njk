@@ -6,6 +6,13 @@
   <title>{{ title or "THAT'S A WEBSITE" }}</title>
   <meta name="description" content="{{ description or "Vaporwave is back, baby" }}">
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:type"  content="article">
+  <meta property="og:title" content="{% if page.url == "/" %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ description | default(site.description) }}">
+  <meta property="og:url"   content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{%if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}/logo.jpg{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <div class="container">
