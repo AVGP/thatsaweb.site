@@ -1,5 +1,6 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import markdownItAttrs from 'markdown-it-attrs';
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 export default function(eleventyConfig) {
   // Passthrough copy for stylesheets and assets
@@ -53,6 +54,27 @@ eleventyConfig.amendLibrary("md", (mdLib) => {
       // If no matching class is found, render normally without a <div> wrapper
       return defaultImageRender(tokens, idx, options, env, self);
     };
+  });
+
+  // RSS feed please
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss", // or "rss", "json"
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts", // iterate over `collections.posts`
+      limit: 10,     // 0 means no limit
+      sort: "auto",  // or "descending", "ascending"
+    },
+    metadata: {
+      language: "en",
+      title: "That's a website!",
+      subtitle: "The Whimsical Adventures of two old web surfers",
+      base: "https://thatsaweb.site/",
+      author: {
+        name: "Martin Splitt & Eva Mermingi",
+      }
+    }
   });
 
   // just in case you use Windows. I pity the pain.
