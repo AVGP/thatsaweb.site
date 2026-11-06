@@ -4,7 +4,7 @@ date: 2026-11-03
 description: Let's talk about mustaches. And men's (mental) health.
 tags:
   - moustache
-  - men shealth
+  - mens health
 author: Martin
 ---
 
