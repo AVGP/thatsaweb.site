@@ -1,7 +1,7 @@
 ---
 title: Silence of the lambs
 date: 2026-11-16
-description: 
+description: Gripping psychological thriller with fantastic acting, atmosphere and visual design
 tags:
   - thriller
   - horror
