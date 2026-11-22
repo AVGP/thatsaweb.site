@@ -32,6 +32,8 @@ One after another turns away. Some return, some don't. Some things repeat - just
 
 ## Inside and outside and everything in between
 
+![Life is a stage](https://film-grab.com/wp-content/uploads/photo-gallery/57%20(902).jpg)
+
 Eventually he's in the set, he's part of his own play. And then he realises: The extras aren't extras, they each have their own story, their own lives. He's not special, he's not different.
 And then he notices a set inside the set... in which he finds a set.
 
