@@ -25,6 +25,8 @@ What is play? What is happening now? What has happened in the past, real or in t
 
 ## Things fall apart
 
+![They are moving apart](https://film-grab.com/wp-content/uploads/photo-gallery/08%20(969).jpg)
+
 Not only does his health deteriorate and his body starting to sabotage him - he also sabotages and loses the relationships he's so keen on.
 One after another turns away. Some return, some don't. Some things repeat - just with different protagonists around our actual protagonist.
 
@@ -43,6 +45,8 @@ As she says "The end is built into the beginning" she dies of smoke inhalation. 
 And as our protagonist moves around in the ruins of his life - and his play - he figures out when to actually screen his big magnus opum... and gets his final cue through the ear piece: Die.
 
 ## Time...
+
+![A clock at 7:45](https://film-grab.com/wp-content/uploads/photo-gallery/01%20(970).jpg)
 
 What's weird is that we're seeing clocks a few times. And it might just be coincidence but I'm wondering if the end he experiences at the beginning - his relationship falling apart, someone on the radio talking about autumn and death...
 did we just see the minute before his death? Or is this showing that our whole life passes us by, if we're trying to control, to chase the unobtainable, to stick with the path (as he keeps chasing his ex-wife and the relationships he lost).
